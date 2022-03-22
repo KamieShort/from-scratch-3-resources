@@ -1,30 +1,10 @@
-// import React, { useEffect, useState } from 'react';
-// import FamilyData from '../components/FamilyData/familyData';
-// import { fetchFamilyData } from '../services/fetch';
-
-// export default function Main() {
-//   const [members, setMembers] = useState([]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const data = await fetchFamilyData();
-
-//       setMembers(data);
-//     };
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <>
-//       {members.map((member) => (
-//         <FamilyData key={member.name} {...member} />
-//       ))}
-//     </>
-//   );
-// }
-
 import React from 'react';
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      Welcome to the home page. Check out the navigation bar to read a bunch of random data that is
+      stored in Supabase.{' '}
+    </div>
+  );
 }
