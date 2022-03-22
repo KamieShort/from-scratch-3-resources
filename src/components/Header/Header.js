@@ -11,9 +11,9 @@ export default function Header() {
       <NavLink exact to="familyData">
         Family Data
       </NavLink>
-      {/* <NavLink exact to="familyData">
-        Family Data
-      </NavLink> */}
+      <NavLink exact to="favoriteFoods">
+        Favorite Foods
+      </NavLink>
     </div>
   );
 }

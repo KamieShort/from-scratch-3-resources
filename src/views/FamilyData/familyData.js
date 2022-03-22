@@ -14,9 +14,10 @@ export default function FamilyData() {
   }, []);
   return (
     <div>
+      <h1>Family Data</h1>
       {members.map((member) => (
         <div key={member.name} {...member}>
-          <h3>{member.name}</h3>
+          <h2>{member.name}</h2>
           <p>Age: {member.age}</p>
         </div>
       ))}
