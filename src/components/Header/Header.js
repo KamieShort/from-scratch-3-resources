@@ -5,16 +5,16 @@ import './Header.css';
 export default function Header() {
   return (
     <div className="header">
-      <NavLink exact to="/">
+      <NavLink className="NavLink" exact to="/">
         Home
       </NavLink>
-      <NavLink exact to="familyData">
+      <NavLink className="NavLink" exact to="familyData">
         Family Data
       </NavLink>
-      <NavLink exact to="favoriteFoods">
+      <NavLink className="NavLink" exact to="favoriteFoods">
         Favorite Foods
       </NavLink>
-      <NavLink exact to="favoriteDogs">
+      <NavLink className="NavLink" exact to="favoriteDogs">
         Favorite Dogs
       </NavLink>
     </div>
