@@ -19,7 +19,9 @@ export default function FavoriteFoods() {
       {foods.map((food) => (
         <div key={food.id} {...food}>
           <h2>{food.name}</h2>
-          <p2>Cuisine: {food.cuisine}</p2>
+          <p>Cuisine: {food.cuisine}</p>
+          <p>Price: {food.price}</p>
+          <p>Rating: {food.rating}</p>
         </div>
       ))}
     </div>

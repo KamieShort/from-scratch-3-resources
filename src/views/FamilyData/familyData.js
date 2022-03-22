@@ -19,9 +19,10 @@ export default function FamilyData() {
         <div key={member.name} {...member}>
           <h2>{member.name}</h2>
           <p>Age: {member.age}</p>
+          <p>Hobbies: {member.hobbies}</p>
+          <p>Fun Fact: {member.fun_fact}</p>
         </div>
       ))}
-      ;
     </div>
   );
 }

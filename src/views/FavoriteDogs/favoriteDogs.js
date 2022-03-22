@@ -15,10 +15,13 @@ export default function DogsData() {
 
   return (
     <div>
+      <h1>Favorite Dogs</h1>
       {dogs.map((dog) => (
         <div key={dog.name} {...dog}>
           <h2>{dog.name}</h2>
-          <p2>Breed: {dog.breed}</p2>
+          <p>Breed: {dog.breed}</p>
+          <p>Habits: {dog.habits}</p>
+          <p>Age: {dog.age}</p>
         </div>
       ))}
     </div>
