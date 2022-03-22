@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Home from './views/Home/Home';
 import FamilyData from './views/FamilyData/familyData';
 import FavoriteFoods from './views/FavoriteFoods/favoriteFoods';
+import FavoriteDogs from './views/FavoriteDogs/favoriteDogs';
 
 export default function App() {
   return (
@@ -19,6 +20,9 @@ export default function App() {
           </Route>
           <Route exact path="/favoriteFoods">
             <FavoriteFoods />
+          </Route>
+          <Route exact path="/favoriteDogs">
+            <FavoriteDogs />
           </Route>
         </Switch>
       </div>

@@ -7,7 +7,6 @@ export default function FavoriteFoods() {
   useEffect(() => {
     const fetchData2 = async () => {
       const data = await fetchFoods();
-      console.log(data);
 
       setFoods(data);
     };
