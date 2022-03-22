@@ -1,14 +1,19 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Main from './views/Main';
+import Home from './views/Home/Home';
+import FamilyData from './views/FamilyData/familyData';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Main />
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* <Header /> */}
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
-
-export default App;
