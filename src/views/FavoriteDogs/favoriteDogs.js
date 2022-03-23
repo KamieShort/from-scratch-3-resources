@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Dropdown from '../../components/Dropdown/Dropdown';
-import { fetchDogs } from '../../services/fetchDogs';
+import { filterDogs } from '../../services/fetchDogs';
 
 export default function DogsData() {
   const [dogs, setDogs] = useState([]);
-  const [breed, setBreed] = useState('');
-  const query = '';
+  const [breed, setBreed] = useState('All');
 
   useEffect(() => {
     const fetchData3 = async () => {
-      const data = await fetchDogs();
+      const data = await filterDogs(breed);
 
       setDogs(data);
     };
-    fetchData3(breed, query);
-  }, [breed, query]);
+    fetchData3();
+  }, [breed]);
 
   return (
     <div>

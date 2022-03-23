@@ -1,12 +1,20 @@
-import { checkError, client } from './client';
-
-export async function fetchDogs(breed, query) {
+export async function filterDogs(breed) {
   const params = new URLSearchParams();
 
   if (breed !== 'All') {
-    params.set('breed', breed);
+    params.set('breed', `eq.${breed}`);
   }
+  params.set('select', '*');
+  const resp = await fetch(
+    `${process.env.REACT_APP_SUPABASE_URL}/rest/v1/favorite-dogs?${params.toString()}`,
+    {
+      headers: {
+        apikey: process.env.REACT_APP_SUPABASE_KEY,
+        Authorization: `Bearer ${process.env.REACT_APP_SUPABASE_KEY}`,
+      },
+    }
+  );
 
-  const resp = await client.from('favorite-dogs').select('*');
-  return checkError(resp);
+  const data = await resp.json();
+  return data;
 }
